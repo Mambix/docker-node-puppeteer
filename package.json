@@ -1,0 +1,16 @@
+{
+  "name": "node-puppeteer",
+  "version": "1.0.1",
+  "description": "Docker container with puppeteer installed",
+  "main": "daemon.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mambix/docker-node-puppeteer.git"
+  },
+  "author": "MambiX Ltd.",
+  "license": "MIT",
+  "homepage": "https://github.com/Mambix/docker-node-puppeteer#readme",
+  "dependencies": {
+    "puppeteer": "^4.0.1"
+  }
+}
