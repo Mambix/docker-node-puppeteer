@@ -1,0 +1,6 @@
+/.git
+/.vscode
+/*.sh
+/*.log
+/package-lock.json
+/node_modules

@@ -52,9 +52,9 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 
 #copy source files
-COPY . $APP_HOME
+COPY . .
 
-# install all PHP dependencies
+# install all Node dependencies
 RUN npm install
 
 USER scraper
