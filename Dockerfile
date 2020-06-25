@@ -1,11 +1,10 @@
 FROM node:lts-slim
 LABEL maintainer "ledi.mambix@gmail.com"
 
-#set our application folder as an environment variable
+# Set our application folder as an environment variable
 ARG debug_mode=""
 ENV APP_HOME /usr/src/app
 
-RUN useradd -ms /bin/bash scraper
 WORKDIR $APP_HOME
 
 RUN apt-get update && apt-get install -y \
@@ -51,11 +50,11 @@ RUN apt-get update && apt-get install -y \
     xdg-utils && \
     rm -rf /var/lib/apt/lists/*
 
-#copy source files
+# Copy source files
 COPY . .
 
-# install all Node dependencies
+# Install all Node dependencies
 RUN npm install
 
-USER scraper
+# Run daemon
 CMD [ "node", "daemon.js" ]
